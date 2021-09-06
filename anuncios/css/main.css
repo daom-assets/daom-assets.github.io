@@ -5,22 +5,13 @@ body{
 	background-size: contain;
 }
 
-.imgT3 {
-	text-align: left;
-	vertical-align: top;
-}
-
-div .imgT3 img {
-	width: 180px;
-	height: 180px;
-}
 
 .fraseT3 {
 	font-family: Trebuchet MS, Helvetica, sans-serif;
 }
 
 .firmaT3 {
-	font-size: 20px;
+	font-size: 12px;
 	color: #ffffff;
 	font-family: Brush Script MT, cursive;
 }
@@ -54,10 +45,7 @@ blockquote {
 	font-size: 14px;
 }
 
-div .colImgT3 {
-	position: relative;
-	height: 290px
-}
+
 
 div .bottomT3 {
 	position: absolute;
