@@ -5,6 +5,17 @@ body{
 	background-size: contain;
 }
 
+.contentAnuncio{
+	font-family: 'Maven Pro', sans-serif;
+	font-size:0.8em;
+	text-align: justify;
+}
+
+.mainTitle {
+	color: #ffffff;
+	font-size:1.2em;
+	text-align: justify;
+}
 
 .fraseT3 {
 	font-family: Trebuchet MS, Helvetica, sans-serif;
@@ -34,10 +45,6 @@ div .contentT3 {
 	color: #fc7323;
 }
 
-.tituloMedium {
-	font-size: 18px;
-}
-
 blockquote {
 	padding: 0 0 0 15px;
 	margin: 0 0 18px;
@@ -45,10 +52,13 @@ blockquote {
 	font-size: 14px;
 }
 
-
-
 div .bottomT3 {
 	position: absolute;
 	bottom: 0;
 	left: 0;
+}
+
+.textFooter{
+	font-size: 1em;
+	text-align: justify;
 }
