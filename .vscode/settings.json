@@ -1,0 +1,121 @@
+{
+    "workbench.colorCustomizations": {
+        // --- Interfaz General (Azul Oscuro predominante) ---
+        //"sideBar.background": "#00304D", // Barra lateral en Azul Oscuro
+        //"sideBar.foreground": "#FFFFFF",
+        "sideBar.border": "#39A900",
+        "titleBar.activeBackground": "#00304D",
+        //"titleBar.activeForeground": "#FFFFFF",
+        // --- Acentos con Verde Corporativo SENA ---
+        "activityBar.background": "#39A900",
+        "activityBar.inactiveForeground": "#FFFFFF",
+        "activityBar.activeBorder": "#FDC300",
+        "activityBar.activeBackground": "#00304D",
+        "activityBar.foreground": "#FFFFFF",
+        "statusBar.background": "#39A900",
+        "statusBar.foreground": "#FFFFFF",
+        "button.background": "#39A900",
+        "button.foreground": "#FFFFFF",
+        "button.hoverBackground": "#FDC300",
+        "tab.activeBorderTop": "#39A900",
+        "input.border": "#39A900"
+    },
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "comment",
+                "settings": {
+                    "foreground": "#007832",
+                    "fontStyle": "italic"
+                } // Verde Oscuro
+            },
+            {
+                "scope": [
+                    "string",
+                    "meta.verbatim"
+                ],
+                "settings": {
+                    "foreground": "#39A900"
+                } // Verde Corporativo
+            },
+            {
+                "scope": [
+                    "keyword",
+                    "storage.type",
+                    "storage.modifier"
+                ],
+                "settings": {
+                    "foreground": "#71277A"
+                } // Violeta
+            },
+            {
+                "scope": [
+                    "constant.numeric",
+                    "constant.language"
+                ],
+                "settings": {
+                    "foreground": "#71277A"
+                } // Violeta
+            },
+            {
+                "scope": [
+                    "entity.name.function",
+                    "support.function"
+                ],
+                "settings": {
+                    "foreground": "#FDC300",
+                    "fontStyle": "bold"
+                } // Amarillo
+            },
+            {
+                "scope": [
+                    "variable",
+                    "entity.name.variable",
+                    "support.class"
+                ],
+                "settings": {
+                    "foreground": "#50E5F9"
+                } // Azul Claro para variables
+            },
+            {
+                "scope": "entity.name.tag",
+                "settings": {
+                    "foreground": "#FFFFFF"
+                } // Etiquetas en blanco
+            },
+            {
+                "scope": "entity.other.attribute-name",
+                "settings": {
+                    "foreground": "#50E5F9",
+                    "fontStyle": "italic"
+                } // Atributos
+            }
+        ]
+    },
+    "peacock.favoriteColors": [
+        {
+            "name": "Verde Corporativo SENA",
+            "value": "#39A900"
+        },
+        {
+            "name": "Amarillo Full Popular",
+            "value": "#FDC300"
+        },
+        {
+            "name": "Violeta CampeSENA",
+            "value": "#71277A"
+        },
+        {
+            "name": "Verde Oscuro",
+            "value": "#007832"
+        },
+        {
+            "name": "Azul Oscuro",
+            "value": "#00304D"
+        },
+        {
+            "name": "Azul Claro",
+            "value": "#50E5F9"
+        }
+    ]
+}
