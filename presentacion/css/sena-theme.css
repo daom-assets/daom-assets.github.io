@@ -247,7 +247,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
     --r-main-font-size: 42px;
     --r-main-color: var(--color-mine-shaft-900);
     --r-block-margin: 10px;
-    --r-heading-margin: 0 0 20px 0;
+    --r-heading-margin: 0 0 10px 0;
     --r-heading-font: 'Work Sans', sans-serif;
     --r-heading-color: inherit;
     --r-heading-line-height: 1.2;
