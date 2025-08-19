@@ -1,0 +1,474 @@
+/**
+ * SENA Theme for Reveal.js
+ *
+ * Versión completa basada en la estructura de los temas oficiales de Reveal.js.
+ * Creado por Gemini, utilizando la identidad corporativa proporcionada.
+ */
+
+/* *
+ * ===================================================================
+ * TIPOGRAFÍA CORPORATIVA SENA
+ * ===================================================================
+ */
+
+/* --- Work Sans (Principal) --- */
+@font-face {
+    font-family: 'Work Sans';
+    src: url('fonts/WorkSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Work Sans';
+    src: url('fonts/WorkSans-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Work Sans';
+    src: url('fonts/WorkSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Work Sans';
+    src: url('fonts/WorkSans-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Work Sans';
+    src: url('fonts/WorkSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Work Sans';
+    src: url('fonts/WorkSans-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Work Sans';
+    src: url('fonts/WorkSans-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Work Sans';
+    src: url('fonts/WorkSans-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Work Sans';
+    src: url('fonts/WorkSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Work Sans';
+    src: url('fonts/WorkSans-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* --- Calibri (Secundaria) --- */
+@font-face {
+    font-family: 'Calibri';
+    src: url('fonts/Calibri-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Calibri';
+    src: url('fonts/Calibri-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Calibri';
+    src: url('fonts/Calibri-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Calibri';
+    src: url('fonts/Calibri-Bold-italic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Cambia el color del texto para diapositivas con fondo oscuro */
+section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
+  color: #fff;
+}
+
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+:root {
+    /* Verdes Principal */
+    --color-apple-50: #f2ffe5;
+    --color-apple-100: #dfffc7;
+    --color-apple-200: #c1ff95;
+    --color-apple-300: #98fe58;
+    --color-apple-400: #73f526;
+    --color-apple-500: #52dc06;
+    --color-apple-600: #39a900; /* Verde SENA */
+    --color-apple-700: #2e8506;
+    --color-apple-800: #29690b;
+    --color-apple-900: #24580f;
+    --color-apple-950: #0e3201;
+
+    /* Verdes Oscuro */
+    --color-fun-green-50: #ecfff4;
+    --color-fun-green-100: #d3ffe6;
+    --color-fun-green-200: #aaffce;
+    --color-fun-green-300: #69ffaa;
+    --color-fun-green-400: #21ff7d;
+    --color-fun-green-500: #00f25b;
+    --color-fun-green-600: #00ca47;
+    --color-fun-green-700: #009e3b;
+    --color-fun-green-800: #007832; /* Verde Oscuro SENA */
+    --color-fun-green-900: #02652d;
+    --color-fun-green-950: #003916;
+
+    /* Azules Oscuro */
+    --color-blue-whale-50: #eef9ff;
+    --color-blue-whale-100: #dcf4ff;
+    --color-blue-whale-200: #b2ebff;
+    --color-blue-whale-300: #6ddcff;
+    --color-blue-whale-400: #20cbff;
+    --color-blue-whale-500: #00b5ff;
+    --color-blue-whale-600: #0091df;
+    --color-blue-whale-700: #0073b4;
+    --color-blue-whale-800: #006195;
+    --color-blue-whale-900: #00507a;
+    --color-blue-whale-950: #00304d; /* Azul Oscuro SENA */
+
+    /* Morados */
+    --color-eminence-50: #fcf5fe;
+    --color-eminence-100: #f7ebfc;
+    --color-eminence-200: #f0d6f8;
+    --color-eminence-300: #e6b6f1;
+    --color-eminence-400: #d88ae8;
+    --color-eminence-500: #c45cd9;
+    --color-eminence-600: #aa3dbc;
+    --color-eminence-700: #8f309b;
+    --color-eminence-800: #71277a; /* Morado SENA */
+    --color-eminence-900: #632669;
+    --color-eminence-950: #3f0e44;
+
+    /* Naranjas/Amarillos */
+    --color-lightning-yellow-50: #ffffea;
+    --color-lightning-yellow-100: #fffcc5;
+    --color-lightning-yellow-200: #fffa85;
+    --color-lightning-yellow-300: #fff146;
+    --color-lightning-yellow-400: #ffe41b;
+    --color-lightning-yellow-500: #fdc300;
+    --color-lightning-yellow-600: #e29800; /* Naranja SENA */
+    --color-lightning-yellow-700: #bb6c02;
+    --color-lightning-yellow-800: #985408;
+    --color-lightning-yellow-900: #7c440b;
+    --color-lightning-yellow-950: #482300;
+
+    /* Azules Turquesa */
+    --color-turquoise-blue-50: #ecfeff;
+    --color-turquoise-blue-100: #cffafe;
+    --color-turquoise-blue-200: #a5f3fc;
+    --color-turquoise-blue-300: #50e5f9; /* Azul Claro SENA */
+    --color-turquoise-blue-400: #21d4ef;
+    --color-turquoise-blue-500: #05b7d5;
+    --color-turquoise-blue-600: #0792b3;
+    --color-turquoise-blue-700: #0d7491;
+    --color-turquoise-blue-800: #145e76;
+    --color-turquoise-blue-900: #164e63;
+    --color-turquoise-blue-950: #083344;
+
+    /* Negros */
+    --color-black-50: #f6f6f6;
+    --color-black-100: #e7e7e7;
+    --color-black-200: #d1d1d1;
+    --color-black-300: #b0b0b0;
+    --color-black-400: #888888;
+    --color-black-500: #6d6d6d;
+    --color-black-600: #5d5d5d;
+    --color-black-700: #4f4f4f;
+    --color-black-800: #454545;
+    --color-black-900: #3d3d3d;
+    --color-black-950: #000000; /* Negro SENA */
+
+    /* Blancos */
+    --color-white-50: #ffffff; /* Blanco SENA */
+    --color-white-100: #efefef;
+    --color-white-200: #dcdcdc;
+    --color-white-300: #bdbdbd;
+    --color-white-400: #989898;
+    --color-white-500: #7c7c7c;
+    --color-white-600: #656565;
+    --color-white-700: #525252;
+    --color-white-800: #464646;
+    --color-white-900: #3d3d3d;
+    --color-white-950: #292929;
+
+    /* Grises */
+    --color-concrete-50: #f8f8f8;
+    --color-concrete-100: #f2f2f2; /* Gris SENA */
+    --color-concrete-200: #dcdcdc;
+    --color-concrete-300: #bdbdbd;
+    --color-concrete-400: #989898;
+    --color-concrete-500: #7c7c7c;
+    --color-concrete-600: #656565;
+    --color-concrete-700: #525252;
+    --color-concrete-800: #464646;
+    --color-concrete-900: #3d3d3d;
+    --color-concrete-950: #292929;
+
+    /* Grises Texto */
+    --color-mine-shaft-50: #f6f6f6;
+    --color-mine-shaft-100: #e7e7e7;
+    --color-mine-shaft-200: #d1d1d1;
+    --color-mine-shaft-300: #b0b0b0;
+    --color-mine-shaft-400: #888888;
+    --color-mine-shaft-500: #6d6d6d;
+    --color-mine-shaft-600: #5d5d5d;
+    --color-mine-shaft-700: #4f4f4f;
+    --color-mine-shaft-800: #454545;
+    --color-mine-shaft-900: #333333; /* Gris Texto SENA */
+    --color-mine-shaft-950: #262626;
+
+
+
+    /* --- Variables de Reveal.js --- */
+    --r-background-color: var(--color-white-50);
+    --r-main-font: 'Work Sans', sans-serif;
+    --r-main-font-size: 42px;
+    --r-main-color: var(--color-mine-shaft-900);
+    --r-block-margin: 20px;
+    --r-heading-margin: 0 0 20px 0;
+    --r-heading-font: 'Work Sans', sans-serif;
+    --r-heading-color: inherit;
+    --r-heading-line-height: 1.2;
+    --r-heading-letter-spacing: normal;
+    --r-heading-text-transform: none; /* Personalización SENA */
+    --r-heading-text-shadow: none;
+    --r-heading-font-weight: 700; /* Personalización SENA */
+    --r-heading1-size: 2.5em;
+    --r-heading2-size: 1.6em;
+    --r-heading3-size: 1.3em;
+    --r-heading4-size: 1.0em;
+    --r-code-font: monospace;
+    --r-link-color: var(--color-apple-600);
+    --r-link-color-hover: var(--color-apple-700);
+    --r-selection-background-color: var(--color-apple-300);
+    --r-selection-color: var(--color-mine-shaft-900);
+}
+
+.reveal-viewport {
+  background: var(--r-background-color);
+  background-color: var(--r-background-color);
+}
+
+.reveal {
+  font-family: var(--r-main-font);
+  font-size: var(--r-main-font-size);
+  font-weight: 300; /* Personalización SENA (Light) */
+  color: var(--r-main-color);
+}
+
+.reveal ::selection {
+  color: var(--r-selection-color);
+  background: var(--r-selection-background-color);
+  text-shadow: none;
+}
+
+.reveal .slides section,
+.reveal .slides section > section {
+  line-height: 1.3;
+  font-weight: inherit;
+}
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  /* margin: var(--r-heading-margin); */
+  /* color: var(--r-heading-color); */
+  font-family: var(--r-heading-font);
+  font-weight: var(--r-heading-font-weight);
+  /* line-height: var(--r-heading-line-height); */
+  letter-spacing: var(--r-heading-letter-spacing);
+  text-transform: var(--r-heading-text-transform);
+  text-shadow: var(--r-heading-text-shadow);
+  word-wrap: break-word;
+}
+
+.reveal h1 { font-size: var(--r-heading1-size); }
+.reveal h2 { font-size: var(--r-heading2-size); }
+.reveal h3 { font-size: var(--r-heading3-size); }
+.reveal h4 { font-size: var(--r-heading4-size); }
+
+/*********************************************
+ * OTHER
+ *********************************************/
+.reveal p {
+  margin: var(--r-block-margin) 0;
+  line-height: 1.3;
+}
+
+/* Remove trailing margins after titles */
+.reveal h1:last-child,
+.reveal h2:last-child,
+.reveal h3:last-child,
+.reveal h4:last-child,
+.reveal h5:last-child,
+.reveal h6:last-child {
+  margin-bottom: 0;
+}
+
+/* Ensure certain elements are never larger than the slide itself */
+.reveal img,
+.reveal video,
+.reveal iframe {
+  max-width: 95%;
+  max-height: 95%;
+}
+
+.reveal strong,
+.reveal b {
+  font-weight: 700; /* Bold */
+}
+
+.reveal em {
+  font-style: italic;
+}
+
+.reveal ol,
+.reveal dl,
+.reveal ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 0 1em;
+}
+
+.reveal ol { list-style-type: decimal; }
+.reveal ul { list-style-type: disc; }
+.reveal ul ul { list-style-type: square; }
+.reveal ul ul ul { list-style-type: circle; }
+
+.reveal ul ul,
+.reveal ul ol,
+.reveal ol ol,
+.reveal ol ul {
+  display: block;
+  margin-left: 40px;
+}
+
+.reveal dt { font-weight: bold; }
+.reveal dd { margin-left: 40px; }
+
+.reveal blockquote {
+  display: block;
+  position: relative;
+  width: 70%;
+  margin: var(--r-block-margin) auto;
+  padding: 5px;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+.reveal q { font-style: italic; }
+
+.reveal pre {
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: var(--r-block-margin) auto;
+  text-align: left;
+  font-size: 0.55em;
+  font-family: var(--r-code-font);
+  line-height: 1.2em;
+  word-wrap: break-word;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.reveal code {
+  font-family: var(--r-code-font);
+  text-transform: none;
+}
+
+.reveal pre code {
+  display: block;
+  padding: 5px;
+  overflow: auto;
+  max-height: 400px;
+  word-wrap: normal;
+}
+
+.reveal table {
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.reveal table th { font-weight: bold; }
+
+.reveal table th,
+.reveal table td {
+  text-align: left;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border-bottom: 1px solid;
+}
+
+.reveal table tbody tr:last-child th,
+.reveal table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a {
+  color: var(--r-link-color);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.reveal a:hover {
+  color: var(--r-link-color-hover);
+  text-shadow: none;
+  border: none;
+}
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls {
+  color: var(--r-link-color);
+}
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--r-link-color);
+  height: 5px; /* Personalización SENA */
+}
+
+/*********************************************
+ * PRINT BACKGROUND
+ *********************************************/
+@media print {
+  .backgrounds {
+    background-color: var(--r-background-color);
+  }
+}

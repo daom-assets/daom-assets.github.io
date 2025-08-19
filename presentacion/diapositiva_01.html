@@ -5,345 +5,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Presentación con Fondo</title>
+    <title>Presentación SENA con Tailwind CSS</title>
+
+    <!-- Script de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Archivos CSS de Reveal.js -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reset.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
 
-    <!-- Tema de la presentación (puedes cambiarlo) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/white.css">
+    <!-- Tema de la presentación -->
+    <link rel="stylesheet" href="css/sena-theme.css">
 
-    <!-- Estilos personalizados, paleta de colores y tipografía SENA -->
-    <style>
-        /* *
-         * ===================================================================
-         * TIPOGRAFÍA CORPORATIVA SENA
-         * ===================================================================
-        */
+    <!-- Tema Base -->
+    <link rel="stylesheet" href="css/styles.css">
 
-        /* --- Work Sans (Principal) --- */
-        @font-face {
-            font-family: 'Work Sans';
-            src: url('fonts/WorkSans-Light.ttf') format('truetype');
-            font-weight: 300;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'Work Sans';
-            src: url('fonts/WorkSans-LightItalic.ttf') format('truetype');
-            font-weight: 300;
-            font-style: italic;
-        }
-
-        @font-face {
-            font-family: 'Work Sans';
-            src: url('fonts/WorkSans-Regular.ttf') format('truetype');
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'Work Sans';
-            src: url('fonts/WorkSans-Italic.ttf') format('truetype');
-            font-weight: 400;
-            font-style: italic;
-        }
-
-        @font-face {
-            font-family: 'Work Sans';
-            src: url('fonts/WorkSans-Medium.ttf') format('truetype');
-            font-weight: 500;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'Work Sans';
-            src: url('fonts/WorkSans-MediumItalic.ttf') format('truetype');
-            font-weight: 500;
-            font-style: italic;
-        }
-
-        @font-face {
-            font-family: 'Work Sans';
-            src: url('fonts/WorkSans-SemiBold.ttf') format('truetype');
-            font-weight: 600;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'Work Sans';
-            src: url('fonts/WorkSans-SemiBoldItalic.ttf') format('truetype');
-            font-weight: 600;
-            font-style: italic;
-        }
-
-        @font-face {
-            font-family: 'Work Sans';
-            src: url('fonts/WorkSans-Bold.ttf') format('truetype');
-            font-weight: 700;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'Work Sans';
-            src: url('fonts/WorkSans-BoldItalic.ttf') format('truetype');
-            font-weight: 700;
-            font-style: italic;
-        }
-
-        /* --- Calibri (Secundaria) --- */
-        @font-face {
-            font-family: 'Calibri';
-            src: url('fonts/Calibri-Regular.ttf') format('truetype');
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'Calibri';
-            src: url('fonts/Calibri-Italic.ttf') format('truetype');
-            font-weight: 400;
-            font-style: italic;
-        }
-
-        @font-face {
-            font-family: 'Calibri';
-            src: url('fonts/Calibri-Bold.ttf') format('truetype');
-            font-weight: 700;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'Calibri';
-            src: url('fonts/Calibri-Bold-italic.ttf') format('truetype');
-            font-weight: 700;
-            font-style: italic;
-        }
-
-        /* *
-         * ===================================================================
-         * VARIABLES GLOBALES (COLORES Y FUENTES)
-         * ===================================================================
-        */
-        :root {
-            /* Color Principal */
-            --sena-verde-principal: #39A900;
-            /* Colores Secundarios */
-            --sena-verde-oscuro: #007832;
-            --sena-azul-oscuro: #00304D;
-            --sena-morado: #71277A;
-            --sena-naranja: #FDC300;
-            --sena-azul-claro: #50E5F9;
-            /* Colores Neutros */
-            --sena-negro: #000000;
-            --sena-blanco: #FFFFFF;
-            --sena-gris-claro: #F2F2F2;
-            --sena-texto-base: #333333;
-
-            /* Fuentes */
-            --font-principal: 'Work Sans', sans-serif;
-            --font-secundaria: 'Calibri', sans-serif;
-        }
-
-        /* *
-         * ===================================================================
-         * ESTILOS GENERALES Y PERSONALIZADOS
-         * ===================================================================
-        */
-        .reveal {
-            font-family: var(--font-principal);
-        }
-
-        .linea-verde {
-            width: 100px;
-            height: 3px;
-            background-color: var(--sena-verde-principal);
-            margin: 1rem 0;
-        }
-
-        .linea-blanca {
-            width: 150px;
-            height: 3px;
-            background-color: var(--sena-blanco);
-            margin: 1rem 0;
-        }
-
-        /* --- Estilos Diapositiva 1 --- */
-        .titulo-superpuesto {
-            position: absolute;
-            top: 30%;
-            left: -60px;
-            text-align: left;
-            width: 80%;
-        }
-
-        .titulo-superpuesto h1 {
-            color: var(--sena-texto-base);
-            font-family: var(--font-principal);
-            font-size: 5rem;
-            font-weight: 700;
-            margin: 0;
-            line-height: 1.1;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-            text-transform: none !important;
-        }
-
-        /* --- Estilos Diapositiva 2 --- */
-        .contenido-centrado {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            text-align: center;
-        }
-
-        .contenido-centrado h2 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: var(--sena-texto-base);
-            text-transform: none !important;
-        }
-
-        .contenido-centrado p {
-            font-size: 1.5rem;
-            font-weight: 300;
-            color: var(--sena-texto-base);
-            max-width: 500px;
-        }
-
-        /* --- Estilos Diapositiva 3 (Fondo Verde) --- */
-        .contenido-verde {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            text-align: center;
-            color: var(--sena-blanco);
-        }
-
-        .contenido-verde h2 {
-            font-size: 4rem;
-            font-weight: 700;
-            color: var(--sena-blanco);
-            text-transform: none !important;
-        }
-
-        .contenido-verde .nota-accesibilidad {
-            font-size: 1.2rem;
-            font-weight: 400;
-            max-width: 650px;
-            margin-top: 2rem;
-        }
-
-        /* --- Estilos Diapositiva 4 (Dos Columnas) --- */
-        .dos-columnas {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            height: 100%;
-        }
-
-        .columna-izquierda {
-            flex: 1;
-            text-align: left;
-            padding-left: 2rem;
-        }
-
-        .columna-izquierda h2 {
-            color: var(--sena-verde-principal);
-            font-weight: 700;
-            font-size: 2.5rem;
-            text-transform: none !important;
-        }
-
-        .columna-izquierda p,
-        .columna-izquierda li {
-            font-weight: 300;
-            color: var(--sena-texto-base);
-            font-size: 1.2rem;
-        }
-
-        .columna-izquierda ol {
-            padding-left: 1.5rem;
-        }
-
-        .columna-derecha {
-            flex: 1;
-        }
-
-        .columna-derecha img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        /* --- Estilos Diapositiva 5 (Contenido Izquierda) --- */
-        .contenido-izquierda {
-            text-align: left;
-            padding: 0 5%;
-        }
-
-        .contenido-izquierda h3 {
-            font-size: 2.8rem;
-            font-weight: 700;
-            color: var(--sena-texto-base);
-            text-transform: none !important;
-        }
-
-        .contenido-izquierda p,
-        .contenido-izquierda li {
-            font-weight: 300;
-            color: var(--sena-texto-base);
-            font-size: 1.3rem;
-        }
-
-        .contenido-izquierda ol {
-            padding-left: 2rem;
-        }
-
-        /* --- Estilos Diapositiva 6 (Tabla) --- */
-        .contenido-tabla {
-            padding-top: 2rem;
-        }
-
-        .contenido-tabla h2 {
-            color: var(--sena-verde-principal);
-            font-size: 2.5rem;
-            font-weight: 700;
-            text-transform: none !important;
-            text-align: left;
-            padding-left: 5%;
-            margin-bottom: 2rem;
-        }
-
-        table.sena-tabla {
-            width: 90%;
-            margin: 0 auto;
-            border-collapse: collapse;
-        }
-
-        table.sena-tabla th,
-        table.sena-tabla td {
-            border: 1px solid #ccc;
-            padding: 0.8rem;
-            text-align: center;
-            font-size: 0.9rem;
-        }
-
-        table.sena-tabla thead {
-            background-color: #333;
-            color: var(--sena-blanco);
-            font-weight: 600;
-        }
-
-        table.sena-tabla tbody td {
-            background-color: #f9f9f9;
-        }
-    </style>
 </head>
 
 <body>
@@ -352,27 +28,30 @@
 
             <!-- Diapositiva 1: Título Principal -->
             <section data-background-image="wallpapers/image2.png" data-background-size="contain">
-                <div class="titulo-superpuesto">
-                    <h1>Título</h1>
-                    <h1>presentación</h1>
+                <div class="absolute top-[30%] left-[0px] text-left w-5/5">
+                    <h2 class="text-[var(--color-mine-shaft-700)] text-[1rem] font-bold m-0 leading-none mb-0">Título
+                    </h2>
+                    <h2 class="text-[var(--color-mine-shaft-700)] text-[5rem] font-bold m-0 leading-none">presentación
+                    </h2>
                 </div>
             </section>
 
             <!-- Diapositiva 2: Título Centrado -->
             <section data-background-image="wallpapers/image3.png" data-background-size="cover">
-                <div class="contenido-centrado">
-                    <h2>Título</h2>
-                    <div class="linea-verde"></div>
-                    <p>texto corto descriptivo<br>a 2 o 3 líneas</p>
+                <div class="flex flex-col justify-center items-center h-full text-center">
+                    <h2 class="text-[3.5rem] font-bold text-[var(--color-mine-shaft-800)]">Título</h2>
+                    <div class="w-[100px] h-[3px] bg-[var(--color-apple-600)] my-4"></div>
+                    <p class="text-[1.5rem] font-light text-[var(--color-black-950)] max-w-[500px]">texto corto
+                        descriptivo<br>a 2 o 3 líneas</p>
                 </div>
             </section>
 
             <!-- Diapositiva 3: Fondo Verde -->
             <section data-background-image="wallpapers/image4.png" data-background-size="cover">
-                <div class="contenido-verde">
-                    <h2>Título</h2>
-                    <div class="linea-blanca"></div>
-                    <p class="nota-accesibilidad">
+                <div class="flex flex-col justify-center items-center h-full text-center text-white">
+                    <h2 class="text-[4rem] font-bold text-[var(--color-concrete-50)]">Título</h2>
+                    <div class="w-[150px] h-[3px] bg-white my-4"></div>
+                    <p class="text-[1.2rem] font-normal max-w-[650px] mt-8">
                         NOTA: Las diapositivas con fondo de color verde, deben utilizarse solo para títulos con
                         tipografía grande en variaciones Bold, Extrabold o Black, para garantizar cumplimiento de
                         criterios de accesibilidad.
@@ -382,146 +61,244 @@
 
             <!-- Diapositiva 4: Dos Columnas -->
             <section data-background-image="wallpapers/image3.png" data-background-size="cover">
-                <div class="dos-columnas">
-                    <div class="columna-izquierda">
-                        <h2>Título</h2>
-                        <div class="linea-verde"></div>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                            tincidunt ut.</p>
-                        <ol>
-                            <li class="fragment">Lorem ipsum dolor sit amet.</li>
-                            <li class="fragment">consectetuer adipiscing elit.</li>
-                            <li class="fragment">diam nonummy nibh euismod tincidunt ut.</li>
+                <div class="flex items-center gap-8 h-full">
+                    <div class="flex-1 text-left pl-8">
+                        <h3 class="text-[var(--color-apple-600)] font-bold text-[1.0rem]">Título</h3>
+                        <div class="w-[100px] h-[3px] bg-[var(--color-apple-600)] my-4"></div>
+                        <p class="font-light text-[var(--color-mine-shaft-900)] text-[1.2rem]">Lorem ipsum dolor sit
+                            amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
+                        <ol class="pl-6 list-decimal">
+                            <li class="fragment font-light text-[var(--color-mine-shaft-900)] text-[1.2rem]">Lorem ipsum
+                                dolor sit amet.</li>
+                            <li class="fragment font-light text-[var(--color-mine-shaft-900)] text-[1.2rem]">
+                                consectetuer adipiscing elit.</li>
+                            <li class="fragment font-light text-[var(--color-mine-shaft-900)] text-[1.2rem]">diam
+                                nonummy nibh euismod tincidunt ut.</li>
                         </ol>
                     </div>
-                    <div class="columna-derecha">
-                        <img src="wallpapers/image5.jpg" alt="Persona sonriendo y mostrando el pulgar hacia arriba">
+                    <div class="flex-1">
+                        <img src="wallpapers/image5.jpg" alt="Persona sonriendo y mostrando el pulgar hacia arriba"
+                            class="w-full h-auto rounded-lg">
                     </div>
                 </div>
             </section>
 
             <!-- Diapositiva 5: Contenido a la Izquierda -->
             <section data-background-image="wallpapers/image3.png" data-background-size="cover">
-                <div class="contenido-izquierda">
-                    <h3>Subtítulo</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-                        ut. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                        tincidunt ut.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-                        ut. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                        tincidunt ut.</p>
-                    <ol>
-                        <li class="fragment">Lorem ipsum dolor sit amet.</li>
-                        <li class="fragment">consectetuer adipiscing elit.</li>
-                        <li class="fragment">diam nonummy nibh euismod tincidunt ut.</li>
+                <div class="text-left px-[5%]">
+                    <h3 class="text-[2.8rem] font-bold text-[var(--color-mine-shaft-800)]">Subtítulo</h3>
+                    <p class="font-light text-[var(--color-mine-shaft-900)] text-[1.3rem] mt-4">Lorem ipsum dolor sit
+                        amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut. Lorem ipsum
+                        dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
+                    <p class="font-light text-[var(--color-mine-shaft-900)] text-[1.3rem] mt-4">Lorem ipsum dolor sit
+                        amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut. Lorem ipsum
+                        dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
+                    <ol class="pl-8 list-decimal mt-4">
+                        <li class="fragment font-light text-[var(--color-mine-shaft-900)] text-[1.3rem]">Lorem ipsum
+                            dolor sit amet.</li>
+                        <li class="fragment font-light text-[var(--color-mine-shaft-900)] text-[1.3rem]">consectetuer
+                            adipiscing elit.</li>
+                        <li class="fragment font-light text-[var(--color-mine-shaft-900)] text-[1.3rem]">diam nonummy
+                            nibh euismod tincidunt ut.</li>
                     </ol>
                 </div>
             </section>
 
             <!-- Diapositiva 6: Tabla -->
             <section data-background-image="wallpapers/image6.png" data-background-size="cover" data-transition="zoom">
-                <div class="contenido-tabla">
-                    <h2>Título</h2>
-                    <table class="sena-tabla">
-                        <thead>
+                <!-- CAMBIO: Se usa un contenedor flex para alinear el contenido en la parte superior, anulando el centrado de Reveal.js -->
+                <div class="h-full flex flex-col justify-start pt-0">
+                    <h2 class="text-[var(--color-white-50)] text-[2.5rem] font-bold text-left pl-[5%] mb-8">Título</h2>
+                    <table class="w-[90%] mx-auto border-collapse">
+                        <thead class="bg-[var(--color-mine-shaft-900)] text-white font-semibold">
                             <tr>
-                                <th>Categoría</th>
-                                <th>Categoría</th>
-                                <th>Categoría</th>
-                                <th>Categoría</th>
-                                <th>Categoría</th>
-                                <th>Categoría</th>
-                                <th>Categoría</th>
-                                <th>Categoría</th>
-                                <th>Categoría</th>
-                                <th>Categoría</th>
+                                <th class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem]">
+                                    Categoría</th>
+                                <th class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem]">
+                                    Categoría</th>
+                                <th class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem]">
+                                    Categoría</th>
+                                <th class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem]">
+                                    Categoría</th>
+                                <th class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem]">
+                                    Categoría</th>
+                                <th class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem]">
+                                    Categoría</th>
+                                <th class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem]">
+                                    Categoría</th>
+                                <th class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem]">
+                                    Categoría</th>
+                                <th class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem]">
+                                    Categoría</th>
+                                <th class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem]">
+                                    Categoría</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Datos</td>
-                                <td>Datos</td>
-                                <td>Datos</td>
-                                <td>Datos</td>
-                                <td>Datos</td>
-                                <td>Datos</td>
-                                <td>Datos</td>
-                                <td>Datos</td>
-                                <td>Datos</td>
-                                <td>Datos</td>
+                                <td
+                                    class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem] bg-[var(--color-concrete-50)]">
+                                    Datos</td>
+                                <td
+                                    class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem] bg-[var(--color-concrete-50)]">
+                                    Datos</td>
+                                <td
+                                    class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem] bg-[var(--color-concrete-50)]">
+                                    Datos</td>
+                                <td
+                                    class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem] bg-[var(--color-concrete-50)]">
+                                    Datos</td>
+                                <td
+                                    class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem] bg-[var(--color-concrete-50)]">
+                                    Datos</td>
+                                <td
+                                    class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem] bg-[var(--color-concrete-50)]">
+                                    Datos</td>
+                                <td
+                                    class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem] bg-[var(--color-concrete-50)]">
+                                    Datos</td>
+                                <td
+                                    class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem] bg-[var(--color-concrete-50)]">
+                                    Datos</td>
+                                <td
+                                    class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem] bg-[var(--color-concrete-50)]">
+                                    Datos</td>
+                                <td --
+                                    class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem] bg-[var(--color-concrete-50)]">
+                                    Datos</td>
                             </tr>
                             <!-- Repite las filas según sea necesario -->
                             <tr>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
                             </tr>
                             <tr>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
                             </tr>
                             <tr>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
                             </tr>
                             <tr>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
                             </tr>
                             <tr>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
                             </tr>
                             <tr>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
+                                <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                    &nbsp;</td>
                             </tr>
                         </tbody>
                     </table>
@@ -542,27 +319,11 @@
         // Inicializa Reveal.js
         Reveal.initialize({
             hash: true,
-
-            // --- NUEVAS CONFIGURACIONES DE INTERACTIVIDAD ---
-
-            // Muestra las flechas de control en la esquina inferior derecha
             controls: true,
-
-            // Muestra una barra de progreso en la parte inferior
             progress: true,
-
-            // Centra verticalmente el contenido de las diapositivas
             center: true,
-
-            // Transición por defecto
-            // Opciones: 'slide' | 'fade' | 'zoom' | 'convex' | 'concave' | 'none'
             transition: 'slide',
-
-            // Velocidad de la transición
-            // Opciones: 'default' | 'fast' | 'slow'
             transitionSpeed: 'default',
-
-            // Transición para los fondos de las diapositivas
             backgroundTransition: 'fade'
         });
     </script>
