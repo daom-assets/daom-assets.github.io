@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Presentación SENA con Tailwind CSS</title>
+
+    <!-- Script de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Archivos CSS de Reveal.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+
+    <!-- Tema de la presentación -->
+    <link rel="stylesheet" href="css/sena-theme.css">
+
+    <!-- Tema Base -->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Diapositiva 1: Título Principal -->
+            <section data-background-image="wallpapers/image2.png" data-background-size="contain">
+                <div class="absolute top-[30%] left-[0px] text-left w-5/5">
+                    <h2 class="text-[var(--color-mine-shaft-700)] text-[1rem] font-bold m-0 leading-none mb-0">Título
+                    </h2>
+                    <h2 class="text-[var(--color-mine-shaft-700)] text-[5rem] font-bold m-0 leading-none">presentación
+                    </h2>
+                </div>
+            </section>
+
+            <!-- Diapositiva 2: Título Centrado -->
+            <section data-background-image="wallpapers/image3.png" data-background-size="cover">
+                <div class="flex flex-col justify-center items-center h-full text-center">
+                    <h2 class="text-[3.5rem] font-bold text-[var(--color-mine-shaft-800)]">Título</h2>
+                    <div class="w-[100px] h-[3px] bg-[var(--color-apple-600)] my-4"></div>
+                    <p class="text-[1.5rem] font-light text-[var(--color-black-950)] max-w-[500px]">texto corto
+                        descriptivo<br>a 2 o 3 líneas</p>
+                </div>
+            </section>
+
+            <!-- Diapositiva 3: Fondo Verde -->
+            <section data-background-image="wallpapers/image4.png" data-background-size="cover">
+                <div class="flex flex-col justify-center items-center h-full text-center text-white">
+                    <h2 class="text-[4rem] font-bold text-[var(--color-concrete-50)]">Título</h2>
+                    <div class="w-[150px] h-[3px] bg-white my-4"></div>
+                    <p class="text-[1.2rem] font-normal max-w-[650px] mt-8">
+                        NOTA: Las diapositivas con fondo de color verde, deben utilizarse solo para títulos con
+                        tipografía grande en variaciones Bold, Extrabold o Black, para garantizar cumplimiento de
+                        criterios de accesibilidad.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Diapositiva 4: Dos Columnas -->
+            <section data-background-image="wallpapers/image3.png" data-background-size="cover">
+                <div class="flex items-center gap-8 h-full">
+                    <div class="flex-1 text-left pl-8">
+                        <h3 class="text-[var(--color-apple-600)] font-bold text-[1.0rem]">Título</h3>
+                        <div class="w-[100px] h-[3px] bg-[var(--color-apple-600)] my-4"></div>
+                        <p class="font-light text-[var(--color-mine-shaft-900)] text-[1.2rem]">Lorem ipsum dolor sit
+                            amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
+                        <ol class="pl-6 list-decimal">
+                            <li class="fragment font-light text-[var(--color-mine-shaft-900)] text-[1.2rem]">Lorem ipsum
+                                dolor sit amet.</li>
+                            <li class="fragment font-light text-[var(--color-mine-shaft-900)] text-[1.2rem]">
+                                consectetuer adipiscing elit.</li>
+                            <li class="fragment font-light text-[var(--color-mine-shaft-900)] text-[1.2rem]">diam
+                                nonummy nibh euismod tincidunt ut.</li>
+                        </ol>
+                    </div>
+                    <div class="flex-1">
+                        <img src="wallpapers/image5.jpg" alt="Persona sonriendo y mostrando el pulgar hacia arriba"
+                            class="w-full h-auto rounded-lg">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Diapositiva 5: Contenido a la Izquierda -->
+            <section data-background-image="wallpapers/image3.png" data-background-size="cover">
+                <div class="text-left px-[5%]">
+                    <h3 class="text-[2.8rem] font-bold text-[var(--color-mine-shaft-800)]">Subtítulo</h3>
+                    <p class="font-light text-[var(--color-mine-shaft-900)] text-[1.3rem] mt-4">Lorem ipsum dolor sit
+                        amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut. Lorem ipsum
+                        dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
+                    <p class="font-light text-[var(--color-mine-shaft-900)] text-[1.3rem] mt-4">Lorem ipsum dolor sit
+                        amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut. Lorem ipsum
+                        dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
+                    <ol class="pl-8 list-decimal mt-4">
+                        <li class="fragment font-light text-[var(--color-mine-shaft-900)] text-[1.3rem]">Lorem ipsum
+                            dolor sit amet.</li>
+                        <li class="fragment font-light text-[var(--color-mine-shaft-900)] text-[1.3rem]">consectetuer
+                            adipiscing elit.</li>
+                        <li class="fragment font-light text-[var(--color-mine-shaft-900)] text-[1.3rem]">diam nonummy
+                            nibh euismod tincidunt ut.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Diapositiva 6: Tabla -->
+            <section data-background-image="wallpapers/image6.png" data-background-size="cover" data-transition="zoom">
+                <!-- <div class="pt-10"> -->
+                <h3 class="text-[var(--color-apple-600)] text-[2.5rem] font-bold text-left pl-[5%] pt-20 mb-1">Título
+                </h3>
+                <table class="w-[90%] mx-auto border-collapse">
+                    <thead class="bg-[var(--color-mine-shaft-900)] text-white font-semibold">
+                        <tr>
+                            <th class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem]">
+                                Categoría</th>
+                            <th class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem]">
+                                Categoría</th>
+                            <th class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem]">
+                                Categoría</th>
+                            <th class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem]">
+                                Categoría</th>
+                            <th class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem]">
+                                Categoría</th>
+                            <th class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem]">
+                                Categoría</th>
+                            <th class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem]">
+                                Categoría</th>
+                            <th class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem]">
+                                Categoría</th>
+                            <th class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem]">
+                                Categoría</th>
+                            <th class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem]">
+                                Categoría</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td
+                                class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem] bg-[var(--color-concrete-50)]">
+                                Datos</td>
+                            <td
+                                class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem] bg-[var(--color-concrete-50)]">
+                                Datos</td>
+                            <td
+                                class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem] bg-[var(--color-concrete-50)]">
+                                Datos</td>
+                            <td
+                                class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem] bg-[var(--color-concrete-50)]">
+                                Datos</td>
+                            <td
+                                class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem] bg-[var(--color-concrete-50)]">
+                                Datos</td>
+                            <td
+                                class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem] bg-[var(--color-concrete-50)]">
+                                Datos</td>
+                            <td
+                                class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem] bg-[var(--color-concrete-50)]">
+                                Datos</td>
+                            <td
+                                class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem] bg-[var(--color-concrete-50)]">
+                                Datos</td>
+                            <td
+                                class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem] bg-[var(--color-concrete-50)]">
+                                Datos</td>
+                            <td --
+                                class="border border-[var(--color-concrete-200)] p-3 text-center text-[0.9rem] bg-[var(--color-concrete-50)]">
+                                Datos</td>
+                        </tr>
+                        <!-- Repite las filas según sea necesario -->
+                        <tr>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                            <td class="border border-[var(--color-concrete-200)] p-3 bg-[var(--color-concrete-50)]">
+                                &nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- </div> -->
+            </section>
+
+            <!-- Diapositiva 7: Final -->
+            <section data-background-image="wallpapers/image8.png" data-background-size="cover" data-transition="fade">
+                <!-- Esta diapositiva solo muestra la imagen de fondo -->
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Archivos JS de Reveal.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
+    <script>
+        // Inicializa Reveal.js
+        Reveal.initialize({
+            hash: true,
+            controls: true,
+            progress: true,
+            center: true,
+            transition: 'slide',
+            transitionSpeed: 'default',
+            backgroundTransition: 'fade'
+        });
+    </script>
+</body>
+
+</html>
